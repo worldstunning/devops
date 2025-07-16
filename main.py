@@ -1,3 +1,6 @@
-while(i> 10):
-  print("hello ji")
-  i+1
+from fastapi import FastAPI
+app = FastAPI()
+
+@app.get("/")
+def root():
+  return {"message":"hello world"}
